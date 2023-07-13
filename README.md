@@ -4,6 +4,15 @@ When you have loads of house plants watering them can be a chore, and when they 
 However through the use of remote sensors, the internet of things, a small database, and a splash of machine learning this problem can be *easily* overcome!
 
 ## How it works... currently
+At the moment There are 3 main steps to the process.
+- Step 1: An Arduino with a soil moisture sensor publishes soil moisture readings to serial
+- Step 2: A python script reads the values published to serial and adds them to a NoSQL database (mongoDB)
+- Step 3: A streamlit app reads the values from the database and plots a lovely graph!
+
+## Future Plans
+Lots... CI/CD pipeline, MLOps Pipeline, better data solution than writing and reading directly from a mongoDB
+
+Immediate next steps are to train a basic model that will classify whether a plant needs watering or not based on sensor data and flag the need for watering in the webapp.
 
 ## Setup
 ### Software and tools
